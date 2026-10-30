@@ -100,6 +100,8 @@ python firmware/tools/pendant_rx.py
 - Dropped packets print `N frame(s) lost` and are filled with silence.
 - The script also prints `state: recording=… batt=… mV` and CO2 lines when they arrive.
 
+**This laptop test ends at a WAV file.** It does not send a request to Grok Bot. The target workflow is button hold/release → iPhone BLE receiver → automatic audio delivery to Grok Bot, including when the phone is locked. See [`VOICE_TO_GROK_BOT.md`](VOICE_TO_GROK_BOT.md) for the integration gates. Until the iPhone receiver exists, do not count a successful laptop recording as end-to-end validation.
+
 ## 6. Test the CO2 sensor
 
 ### 6a. Is it wired, and how? (2 minutes)
