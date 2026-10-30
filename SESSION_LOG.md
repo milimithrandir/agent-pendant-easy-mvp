@@ -12,6 +12,8 @@ Dates are approximate (from file times of the work), Europe/Helsinki time. Every
 | 2026-10-27 | Max: make the MVP **as cheap as possible**, v1 maybe even cheaper. Research ranks a **≈ €49–56** XIAO nRF52840 Sense + STCC4 module build (existing firmware) as the top pick, plus a **free phone-only Step 0**. Custom board becomes v2. |
 | 2026-10-30 | A friend's video: offline "Whistle" speech-to-text on an ESP32-S3 with an INMP441 mic. Max has an ESP32 at home. Verdict: an ESP32-S3 can run the repo's ESP32-S3 sketch for a hold-to-talk bench test, but the offline model isn't useful here (8–12 s per command, ~78 % on simple commands); the CO2 module is still needed. |
 | 2026-10-30 | **Max: "let's do the easy MVP."** This repo created with the order list (re-checked live today), build guide, Step 0 and the v2 path. Live re-check found the 150 mAh cell sold out (switched to 100 mAh) and the H 5.0 mm button nearly sold out (switched to H 4.3 mm). |
+| 2026-10-30 | Max wants the parts **as soon as possible** while still keeping costs down. CO2 board switched from the AliExpress STCC4 module (1–3 weeks, new seller) to the **Adafruit 6478 from Kiwi Electronics (NL)**: same-day shipping, zero firmware changes. Total ≈ €70–75 instead of ≈ €49–56. Board stays at BerryBase: Kiwi's XIAO Sense is out of stock until 2026-11-06, Robomaa (FI) only has the non-Sense XIAO. |
+| 2026-10-30 | Goal clarified: **voice input should go to Max's Grok Bot automatically.** Max uses the Grok Bot app on Mac and phone today. Phone/Mac bridge still to be built. |
 
 ## Standing requirements
 - Hold-to-talk only; mic records only while held. No vibration. No screen, no speaker.

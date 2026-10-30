@@ -4,11 +4,11 @@ A wearable AI pendant: **hold a button, talk, and your voice goes over Bluetooth
 
 This repo is the **easy MVP (v1)**: the cheapest build that tests the idea on your body for real, made from off-the-shelf parts and the firmware that's already written. The small custom pendant is **v2** and is planned in [`NEXT_V2.md`](NEXT_V2.md).
 
-> **Decision (2026-10-30): build the easy MVP.** Seeed XIAO nRF52840 Sense + STCC4/SHT40 CO2 module + small LiPo + a button. **≈ €49–56 delivered to Finland.** Nothing ordered yet; Max orders everything himself. Nothing has been tested on hardware yet.
+> **Decision (2026-10-30): build the easy MVP.** Seeed XIAO nRF52840 Sense + Adafruit STCC4/SHT41 CO2 board + small LiPo + a button. **≈ €70–75 delivered to Finland, in about 3–5 business days** (BerryBase + Kiwi, both EU). The CO2 board comes from Kiwi rather than AliExpress to get the parts fast and avoid firmware changes; the AliExpress module (≈ €49–56 total, 1–3 weeks) stays in the order list as the cheaper, slower option. Nothing ordered yet; Max orders everything himself. Nothing has been tested on hardware yet.
 
 ## Start here
 1. [`STEP0_PHONE_TEST.md`](STEP0_PHONE_TEST.md): free, today. Try hold-to-talk with your phone and earbuds before buying anything.
-2. [`ORDER_LIST.md`](ORDER_LIST.md): **what to buy**, re-checked live on 2026-10-30 ([`ORDER_LIST.csv`](ORDER_LIST.csv)).
+2. [`ORDER_LIST.md`](ORDER_LIST.md): **what to buy** (BerryBase + Kiwi), re-checked live on 2026-10-30 ([`ORDER_LIST.csv`](ORDER_LIST.csv)).
 3. [`BUILD_GUIDE.md`](BUILD_GUIDE.md): wiring, assembly, flashing, testing, LiPo safety, troubleshooting.
 4. [`NEXT_V2.md`](NEXT_V2.md): how this turns into the small custom board, and what v1 must teach us first.
 5. [`SESSION_LOG.md`](SESSION_LOG.md): the decisions so far.
@@ -37,7 +37,7 @@ We started from the specs in [`original/`](original/) with a big round **Ø52 mm
 
 ## Status
 - [ ] **Step 0**: phone + earbuds hold-to-talk test ([`STEP0_PHONE_TEST.md`](STEP0_PHONE_TEST.md))
-- [ ] **Order**: BerryBase (board, cell, buttons) and AliExpress (CO2 module) ([`ORDER_LIST.md`](ORDER_LIST.md))
+- [ ] **Order**: BerryBase (board, cell, buttons) and Kiwi Electronics (Adafruit 6478 CO2 board), same day ([`ORDER_LIST.md`](ORDER_LIST.md))
 - [ ] **Firmware flash**: set your own `PAIR_PIN`, flash the bare XIAO over USB ([`BUILD_GUIDE.md` §3](BUILD_GUIDE.md#3-flash-the-firmware))
 - [ ] **Test**: pair, hold-to-talk to `pendant_rx.py`, then CO2 ([`BUILD_GUIDE.md` §5–6](BUILD_GUIDE.md#5-test-hold-to-talk-on-a-laptop))
 - [ ] **Build**: solder button, CO2 module, battery ([`BUILD_GUIDE.md` §2](BUILD_GUIDE.md#2-assembly-step-by-step))

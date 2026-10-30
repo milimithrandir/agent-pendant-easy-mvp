@@ -4,13 +4,13 @@ order,shop,country,item,qty,unit_price_eur,line_total_eur,link,status_2026-10-30
 1,BerryBase,DE (EU),Short-stroke pushbutton 6x6mm H 4.3mm,2,0.13,0.26,https://www.berrybase.de/en/short-stroke-pushbutton-vertical-pcb-mounting-6x6mm-h-4.3mm,live: 100+ in stock,1 spare
 1,BerryBase,DE (EU),DHL Parcel to EU,1,9.90,9.90,https://www.berrybase.de/en/footer/information/payment-dispatch/,live,orders 0.01-199.99 EUR
 1,BerryBase,,SUBTOTAL,,,33.46,,,may be re-priced to Finnish VAT (+~1.30 unverified)
-2,AliExpress,CN,STCC4 CO2 module with onboard SHT40,1,12.79,12.79,https://www.aliexpress.com/item/1005012973112114.html,listing exists; price from 2026-10-27 (not re-readable today),new listing; SHT40 wiring unknown
-2,AliExpress,CN,Finnish customs duty (per item type),1,3.00,3.00,,rule,collected at checkout
-2,AliExpress,CN,Shipping,1,0-3,0-3,,unverified,
-2,AliExpress,,SUBTOTAL,,,15.79-18.79,,,
+2,Kiwi Electronics,NL (EU),Adafruit 6478 STCC4+SHT41,1,30.74,30.74,https://www.kiwi-electronics.com/en/adafruit-stcc4-and-sht41-co2-temperature-amp-humidity-sensor-stemma-qt-qwiic-20617,live: 24.49 ex VAT; same-day shipping before 17:00 NL,firmware works as is
+2,Kiwi Electronics,NL (EU),PostNL/DHL to Finland,1,6-10,6-10,,unverified,check at checkout
+2,Kiwi Electronics,,SUBTOTAL,,,37-41,,,
 3,Espoo library makerspace,FI,3D-printed case (PLA),1,0,0-3,https://www.espoo.fi/,free use (Oct 27),Sello or Iso Omena; reserve via Varaamo
-,,,TOTAL,,,49-56,,,
-fallback,Kiwi Electronics,NL (EU),Adafruit 6478 STCC4+SHT41,1,30.74,30.74,https://www.kiwi-electronics.com/en/adafruit-stcc4-and-sht41-co2-temperature-amp-humidity-sensor-stemma-qt-qwiic-20617,live: 24.49 ex VAT; 5 in stock,+ PostNL ~6-10 unverified; replaces Order 2 -> total ~70-76
+,,,TOTAL,,,70-75,,,
+cheaper,AliExpress,CN,STCC4 CO2 module with onboard SHT40,1,12.79,12.79,https://www.aliexpress.com/item/1005012973112114.html,listing exists; price from 2026-10-27 (not re-readable today),replaces Order 2 -> total ~49-56; 1-3 weeks; new seller; SHT40 wiring unknown
+cheaper,AliExpress,CN,Finnish customs duty (per item type),1,3.00,3.00,,rule,collected at checkout
 fallback,DFRobot,CN,Gravity STCC4 SEN0678 (onboard SHT40; 32x22mm),1,~13.7 (USD 14.90),,https://www.dfrobot.com/product-3098.html,price from search snippet; stock unverified,import VAT/duty extra
 fallback,AliExpress,CN,SCD41 CO2 module,1,11.69-15.40,,https://www.aliexpress.com/item/1005007925654431.html,2026-10-27 Ali card,needs ~1-2 h firmware change
 fallback,AliExpress,CN,402030 LiPo 200mAh,1,5.33,,https://www.aliexpress.com/item/1005010776246310.html,2026-10-27 Ali card,if BerryBase won't ship LiPo; +3 EUR duty
