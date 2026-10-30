@@ -1,0 +1,24 @@
+ref,part,MPN,LCSC,qty_per_board,unit_price_usd_qty1,jlc_type,economic_loading_fee,jlc_stock_2026-10-26,change_vs_extended_plan,source_url
+U1,BLE module nRF52840 15.0x10.2x1.9 integrated antenna,BMD-340-A-R (u-blox),C5456944,1,9.7435,extended,3.07,416,same,https://www.lcsc.com/product-detail/C5456944.html
+U2,CO2 sensor 4x3x1.2 LGA,STCC4-D-R3 (Sensirion),C49191471,1,12.5587,extended,3.07,1473,same,https://www.lcsc.com/product-detail/C49191471.html
+U3,Temp/RH sensor on STCC4 SDA_C/SCL_C (0x44),SHT40-AD1B-R2 (Sensirion),C2909890,1,1.9167,extended,3.07,18521,same,https://www.lcsc.com/product-detail/C2909890.html
+MK1,PDM MEMS mic top-port 4x3x1,SPK0838HT4H-1 (Knowles),C5447637,1,3.8611,extended,3.07,37,same (fallback IM69D130V01 C536262 / 246 in stock),https://www.lcsc.com/product-detail/C5447637.html
+U4,LiPo charger SOT-23-5 (R_PROG 47k = ~21 mA; same pinout as MCP73831),TP4054-42-SOT25R (TOPPOWER),C32574,1,0.1321,preferred extended,0,48695,was MCP73831T-2ACI/OT C424093 (extended $3.07),https://www.lcsc.com/product-detail/C32574.html
+U5,LDO 3.3V 1uA Iq SOT-23,XC6206P332MR-G (Torex),C5446,1,0.1452,basic,0,445685,same,https://www.lcsc.com/product-detail/C5446.html
+Q1,P-MOSFET mic power gated by PTT button,AO3401A,C15127,1,0.096,basic,0,710356,same,https://www.lcsc.com/product-detail/C15127.html
+SW1,Push-to-talk tact switch 5.1x5.1x1.5,TS-1187A-B-A-B (XKB),C318884,1,0.0207,basic,0,1188048,same,https://www.lcsc.com/product-detail/C318884.html
+Y1,32.768 kHz crystal 12.5pF 3.2x1.5,Q13FC13500004 (Epson FC-135),C32346,1,0.1709,basic,0,489053,same,https://www.lcsc.com/product-detail/C32346.html
+D1,ESD diode on VBUS pad SOD-523,LESD5D5.0CT1G,C5274290,0,0.0152,extended,0 (not fitted),88901,DNP: footprint kept but not assembled (saves $3.07),https://www.lcsc.com/product-detail/C5274290.html
+LED1,Indicator LED 0603 red,KT-0603R (Hubei KENTO),C2286,1,0.0077,basic,0,7711421,was NCD0402R1 C130719 (extended $3.07); 0603 instead of 0402,https://www.lcsc.com/product-detail/C2286.html
+C1-C4,100nF 0402 X7R decoupling,CL05B104KO5NNNC,C1525,4,0.0035,basic,0,-,same,https://www.lcsc.com/product-detail/C1525.html
+C5-C6,1uF 0402 X5R (LDO in/out),CL05A105KA5NQNC,C52923,2,0.0063,basic,0,-,same,https://www.lcsc.com/product-detail/C52923.html
+C7-C8,4.7uF 0402 X5R (charger out + module),CL05A475MP5NRNC,C23733,2,0.0153,basic,0,-,was 3 pcs; charger input now 10uF per TP4054 datasheet,https://www.lcsc.com/product-detail/C23733.html
+C9-C10,10uF 0402 X5R (charger VCC input + 3V3 bulk),CL05A106MQ5NUNC,C15525,2,0.0257,basic,0,-,was 1 pc; TP4054 datasheet asks >=10uF on VCC,https://www.lcsc.com/product-detail/C15525.html
+C11-C12,20pF 0402 C0G (32k crystal load),0402CG200J500NT,C1554,2,0.0026,basic,0,-,same,https://www.lcsc.com/product-detail/C1554.html
+R1,47k 0402 charger R_PROG (TP4054: I = 1000 V / R; 47k = ~21 mA),0402WGF4702TCE,C25792,1,0.002,basic,0,-,same value,https://www.lcsc.com/product-detail/C25792.html
+R2-R3,1M 0402 VBAT divider,0402WGF1004TCE,C26083,2,0.0015,basic,0,-,same,https://www.lcsc.com/product-detail/C26083.html
+R4-R6,100k 0402 (FET gate pull-up + VBUS divider),0402WGF1003TCE,C25741,3,0.0015,basic,0,-,same,https://www.lcsc.com/product-detail/C25741.html
+R7,1k 0402 LED,0402WGF1001TCE,C11702,1,0.0013,basic,0,-,same,https://www.lcsc.com/product-detail/C11702.html
+R8-R9,10k 0402 I2C pull-ups (optional),0402WGF1002TCE,C25744,2,0.0024,basic,0,-,same,https://www.lcsc.com/product-detail/C25744.html
+BT1,LiPo 40 mAh 20.5x10x3 with PCM (buy separately; 1 per board),Electrokit 40mAh BEC (Akyga LP301020),-,1,55 SEK incl. 25% VAT,not JLC,-,18 in stock at Electrokit,same; 55 mAh cell dropped,https://www.electrokit.com/en/battery-lipo-3.7v-40mah-bec
+TOOL1,SWD probe CMSIS-DAP (the only programmer),Raspberry Pi Debug Probe SC0889,-,0,11.90 EUR incl. 19% VAT,not JLC,-,100+ in stock at welectron,nRF52840 DK dropped,https://www.welectron.com/Raspberry-Pi-Debug-Probe_1

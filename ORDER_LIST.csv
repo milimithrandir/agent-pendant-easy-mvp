@@ -1,0 +1,18 @@
+order,shop,country,item,qty,unit_price_eur,line_total_eur,link,status_2026-10-30,notes
+1,BerryBase,DE (EU),Seeed XIAO nRF52840 Sense without headers,1,19.90,19.90,https://www.berrybase.de/en/seeed-studio-xiao-nrf52840-sense-bluetooth-5.4-nfc-6-achsen-imu-mikrofon-imu-20-gpios-3-3v/auswahl-ohne-header,live: 84 in stock,pick variant Ohne Header
+1,BerryBase,DE (EU),PKCell LP-401230 LiPo 3.7V 100mAh JST 4x12x30mm,1,3.40,3.40,https://www.berrybase.de/en/lp-401230-lithium-polymer-lipo-battery-3.7v-100mah-with-2-pin-jst-connector,live: 88 in stock,replaces sold-out LP-402025 150mAh; LiPo shipping to FI unverified
+1,BerryBase,DE (EU),Short-stroke pushbutton 6x6mm H 4.3mm,2,0.13,0.26,https://www.berrybase.de/en/short-stroke-pushbutton-vertical-pcb-mounting-6x6mm-h-4.3mm,live: 100+ in stock,1 spare
+1,BerryBase,DE (EU),DHL Parcel to EU,1,9.90,9.90,https://www.berrybase.de/en/footer/information/payment-dispatch/,live,orders 0.01-199.99 EUR
+1,BerryBase,,SUBTOTAL,,,33.46,,,may be re-priced to Finnish VAT (+~1.30 unverified)
+2,AliExpress,CN,STCC4 CO2 module with onboard SHT40,1,12.79,12.79,https://www.aliexpress.com/item/1005012973112114.html,listing exists; price from 2026-10-27 (not re-readable today),new listing; SHT40 wiring unknown
+2,AliExpress,CN,Finnish customs duty (per item type),1,3.00,3.00,,rule,collected at checkout
+2,AliExpress,CN,Shipping,1,0-3,0-3,,unverified,
+2,AliExpress,,SUBTOTAL,,,15.79-18.79,,,
+3,Espoo library makerspace,FI,3D-printed case (PLA),1,0,0-3,https://www.espoo.fi/,free use (Oct 27),Sello or Iso Omena; reserve via Varaamo
+,,,TOTAL,,,49-56,,,
+fallback,Kiwi Electronics,NL (EU),Adafruit 6478 STCC4+SHT41,1,30.74,30.74,https://www.kiwi-electronics.com/en/adafruit-stcc4-and-sht41-co2-temperature-amp-humidity-sensor-stemma-qt-qwiic-20617,live: 24.49 ex VAT; 5 in stock,+ PostNL ~6-10 unverified; replaces Order 2 -> total ~70-76
+fallback,DFRobot,CN,Gravity STCC4 SEN0678 (onboard SHT40; 32x22mm),1,~13.7 (USD 14.90),,https://www.dfrobot.com/product-3098.html,price from search snippet; stock unverified,import VAT/duty extra
+fallback,AliExpress,CN,SCD41 CO2 module,1,11.69-15.40,,https://www.aliexpress.com/item/1005007925654431.html,2026-10-27 Ali card,needs ~1-2 h firmware change
+fallback,AliExpress,CN,402030 LiPo 200mAh,1,5.33,,https://www.aliexpress.com/item/1005010776246310.html,2026-10-27 Ali card,if BerryBase won't ship LiPo; +3 EUR duty
+esp32s3,AliExpress,CN,PDM mic module MP34DT05 (works with ESP32 sketch as is),1,3.68,,https://www.aliexpress.com/item/1005012782353411.html,2026-10-27 Ali card,only for the ESP32-S3 test path
+esp32s3,AliExpress,CN,INMP441 I2S mic (needs code change),1,1.56,,https://www.aliexpress.com/item/1005012438620524.html,2026-10-27 Ali card,only for the ESP32-S3 test path
