@@ -11,7 +11,8 @@ This repo is the **easy MVP (v1)**: the cheapest build that tests the idea on yo
 2. [`ORDER_LIST.md`](ORDER_LIST.md): **what to buy**, re-checked live on 2026-10-30 ([`ORDER_LIST.csv`](ORDER_LIST.csv)).
 3. [`BUILD_GUIDE.md`](BUILD_GUIDE.md): wiring, assembly, flashing, testing, LiPo safety, troubleshooting.
 4. [`NEXT_V2.md`](NEXT_V2.md): how this turns into the small custom board, and what v1 must teach us first.
-5. [`SESSION_LOG.md`](SESSION_LOG.md): the decisions so far.
+5. [`VOICE_TO_GROK_BOT.md`](VOICE_TO_GROK_BOT.md): **the goal**: how held-to-talk voice gets sent to your Grok Bot assistant automatically (webhook routine + speech-to-text, staged plan).
+6. [`SESSION_LOG.md`](SESSION_LOG.md): the decisions so far.
 
 ## How we got here
 We started from the specs in [`original/`](original/) with a big round **Ø52 mm** case, which Max found far too big to wear as an amulet, so it became a **slim Ø35 × 16 mm** round case with no vibration motor, hold-to-talk only and every notification going through the phone. That still looked like "quite a statement" around the neck, so we looked at the smallest hardware on the market: first a **hand-built stack** of dev boards (≈ 25 × 21 × 12 mm bare, rejected for size), then a **custom board** ("Option 2": u-blox BMD-340 module on a Ø26 mm PCB, ≈ Ø28.5 × 8.5 mm finished, minimum path ≈ €170–330). Max then decided to make the first version **as cheap as possible**: the cheapest real-CO2 build is the off-the-shelf XIAO stack at **≈ €49–56** with the firmware already written, so that is v1, and the custom board moves to v2, sized with what v1 teaches us.
@@ -42,6 +43,7 @@ We started from the specs in [`original/`](original/) with a big round **Ø52 mm
 - [ ] **Test**: pair, hold-to-talk to `pendant_rx.py`, then CO2 ([`BUILD_GUIDE.md` §5–6](BUILD_GUIDE.md#5-test-hold-to-talk-on-a-laptop))
 - [ ] **Build**: solder button, CO2 module, battery ([`BUILD_GUIDE.md` §2](BUILD_GUIDE.md#2-assembly-step-by-step))
 - [ ] **Case**: free print at the Espoo library makerspace (Sello / Iso Omena); STL to be made from measured parts
+- [ ] **Voice to Grok Bot**: pick the route (recommended: webhook routine), then Stage 0–2 ([`VOICE_TO_GROK_BOT.md`](VOICE_TO_GROK_BOT.md))
 - [ ] **Wear for a week** and log what breaks, then decide v2 ([`NEXT_V2.md`](NEXT_V2.md))
 
 ## What's in this repo
@@ -50,6 +52,7 @@ We started from the specs in [`original/`](original/) with a big round **Ø52 mm
 | [`ORDER_LIST.md`](ORDER_LIST.md), [`ORDER_LIST.csv`](ORDER_LIST.csv) | buy list, fallbacks, tools, ESP32-S3 path |
 | [`BUILD_GUIDE.md`](BUILD_GUIDE.md) | wiring, assembly, flashing, tests, safety, troubleshooting |
 | [`STEP0_PHONE_TEST.md`](STEP0_PHONE_TEST.md), [`step0/hold_to_talk.html`](step0/hold_to_talk.html) | free no-hardware test |
+| [`VOICE_TO_GROK_BOT.md`](VOICE_TO_GROK_BOT.md) | plan: pendant voice → speech-to-text → Grok Bot assistant |
 | [`NEXT_V2.md`](NEXT_V2.md) | path to the custom board |
 | [`SESSION_LOG.md`](SESSION_LOG.md) | decisions with Max |
 | [`firmware/`](firmware/) | [`agent_pendant_v0_slim_nrf52`](firmware/firmware/agent_pendant_v0_slim_nrf52/agent_pendant_v0_slim_nrf52.ino) (**the easy-MVP firmware**, XIAO nRF52840 Sense), [`agent_pendant_v0_nohaptic`](firmware/firmware/agent_pendant_v0_nohaptic/agent_pendant_v0_nohaptic.ino) (ESP32-S3 bench version), [`tools/pendant_rx.py`](firmware/tools/pendant_rx.py) (laptop receiver), [`README.md`](firmware/README.md) (BLE protocol and behaviour) |
