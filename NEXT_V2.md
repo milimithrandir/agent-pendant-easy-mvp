@@ -18,10 +18,10 @@ A Ø26 mm, 4-layer, 0.8 mm board built around the pre-certified **u-blox BMD-340
 | **Mic through a case hole**: is the speech clear, how much clothing rustle? | record takes through the printed case | sets the mic port size/position (v2 uses a top-port mic) |
 | **Antenna on the body**: range and dropouts phone in pocket / other side of the room | `N frame(s) lost` counts while wearing | the v2 Ø28 case and board-edge antenna keep-out |
 | **Button feel**: force, position, accidental presses | wearing it | v2 button and cap |
-| **Phone side**: which receiver (Android Web Bluetooth page vs. native iOS app) and how the agent gets the audio | build the receiver against v1 | the same BLE protocol carries over to v2 unchanged |
+| **iPhone-to-Grok Bot path**: does one button hold/release deliver a complete recording automatically with the phone locked, and does the Bot act on it? | build and wear-test the native iPhone receiver and Bot delivery route against v1 | preserve a proven BLE protocol and receiver for v2; do not assume a routine equals a normal voice message |
 | **Privacy switch**: needed, or is "mic only powered while held" enough? | your call after wearing | v2 already cuts mic power with the button |
 
 ## Carry-over
-- The **BLE protocol and the receiver** carry over unchanged (same service and characteristics).
+- The **BLE protocol and iPhone receiver** should carry over if the locked-phone and automatic-delivery tests pass; change them if those tests expose a problem.
 - The **firmware** carries over with a new board definition and pin map (bare BMD-340, flashed over SWD with the Pi Debug Probe).
 - The CO2 logic (burst of 3 shots every 5 min, first discarded; hold-off after talking; phone alerts at 1000/1500 ppm) carries over, tuned with v1 data.
