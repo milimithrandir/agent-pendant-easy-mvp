@@ -1,6 +1,6 @@
 # agent-pendant: easy MVP
 
-A wearable AI pendant: **hold a button, talk, and your voice goes over Bluetooth to your phone and your AI agent.** It also reads **CO2** every 5 minutes and sends alerts to the phone. No vibration, no screen, no speaker.
+A wearable AI pendant: **hold a button, talk, and your voice goes over Bluetooth to your phone or Mac and on to your Grok Bot automatically** ([`GROK_BOT_BRIDGE.md`](GROK_BOT_BRIDGE.md)). It also reads **CO2** every 5 minutes and sends alerts to the phone. No vibration, no screen, no speaker.
 
 This repo is the **easy MVP (v1)**: the cheapest build that tests the idea on your body for real, made from off-the-shelf parts and the firmware that's already written. The small custom pendant is **v2** and is planned in [`NEXT_V2.md`](NEXT_V2.md).
 
@@ -10,8 +10,9 @@ This repo is the **easy MVP (v1)**: the cheapest build that tests the idea on yo
 1. [`STEP0_PHONE_TEST.md`](STEP0_PHONE_TEST.md): free, today. Try hold-to-talk with your phone and earbuds before buying anything.
 2. [`ORDER_LIST.md`](ORDER_LIST.md): **what to buy** (BerryBase + Kiwi), re-checked live on 2026-10-30 ([`ORDER_LIST.csv`](ORDER_LIST.csv)).
 3. [`BUILD_GUIDE.md`](BUILD_GUIDE.md): wiring, assembly, flashing, testing, LiPo safety, troubleshooting.
-4. [`NEXT_V2.md`](NEXT_V2.md): how this turns into the small custom board, and what v1 must teach us first.
-5. [`SESSION_LOG.md`](SESSION_LOG.md): the decisions so far.
+4. [`GROK_BOT_BRIDGE.md`](GROK_BOT_BRIDGE.md): how voice gets to Grok Bot (webhook routine + free on-device speech-to-text).
+5. [`NEXT_V2.md`](NEXT_V2.md): how this turns into the small custom board, and what v1 must teach us first.
+6. [`SESSION_LOG.md`](SESSION_LOG.md): the decisions so far.
 
 ## How we got here
 We started from the specs in [`original/`](original/) with a big round **Ø52 mm** case, which Max found far too big to wear as an amulet, so it became a **slim Ø35 × 16 mm** round case with no vibration motor, hold-to-talk only and every notification going through the phone. That still looked like "quite a statement" around the neck, so we looked at the smallest hardware on the market: first a **hand-built stack** of dev boards (≈ 25 × 21 × 12 mm bare, rejected for size), then a **custom board** ("Option 2": u-blox BMD-340 module on a Ø26 mm PCB, ≈ Ø28.5 × 8.5 mm finished, minimum path ≈ €170–330). Max then decided to make the first version **as cheap as possible**: the cheapest real-CO2 build is the off-the-shelf XIAO stack at **≈ €49–56** with the firmware already written, so that is v1, and the custom board moves to v2, sized with what v1 teaches us.
@@ -33,11 +34,13 @@ We started from the specs in [`original/`](original/) with a big round **Ø52 mm
 ## What the easy MVP can and can't validate
 **Can:** whether hold-to-talk is useful day to day; BLE audio quality and range on your body; passkey pairing; real CO2 readings while worn (and how breath and body heat affect them); rough battery life; button feel; the phone-side receiver and BLE protocol, which carry over to v2 unchanged.
 
-**Can't:** the final size and look; the v2 antenna in a Ø28 case; magnetic pogo charging; the v2 mic port acoustics; final battery life (v2 idles lower); the final CO2 vent geometry; iPhone use until a phone receiver exists (only a laptop receiver exists today).
+**Can't:** the final size and look; the v2 antenna in a Ø28 case; magnetic pogo charging; the v2 mic port acoustics; final battery life (v2 idles lower); the final CO2 vent geometry; iPhone use until a phone bridge exists (only a laptop receiver exists today; the Mac bridge to Grok Bot comes first).
 
 ## Status
 - [ ] **Step 0**: phone + earbuds hold-to-talk test ([`STEP0_PHONE_TEST.md`](STEP0_PHONE_TEST.md))
 - [ ] **Order**: BerryBase (board, cell, buttons) and Kiwi Electronics (Adafruit 6478 CO2 board), same day ([`ORDER_LIST.md`](ORDER_LIST.md))
+- [ ] **Grok Bot routine**: create the webhook routine and test it with `curl` (works today) ([`GROK_BOT_BRIDGE.md`](GROK_BOT_BRIDGE.md))
+- [ ] **Mac bridge**: `grok_bridge.py` (Whisper + webhook POST)
 - [ ] **Firmware flash**: set your own `PAIR_PIN`, flash the bare XIAO over USB ([`BUILD_GUIDE.md` §3](BUILD_GUIDE.md#3-flash-the-firmware))
 - [ ] **Test**: pair, hold-to-talk to `pendant_rx.py`, then CO2 ([`BUILD_GUIDE.md` §5–6](BUILD_GUIDE.md#5-test-hold-to-talk-on-a-laptop))
 - [ ] **Build**: solder button, CO2 module, battery ([`BUILD_GUIDE.md` §2](BUILD_GUIDE.md#2-assembly-step-by-step))
@@ -50,6 +53,7 @@ We started from the specs in [`original/`](original/) with a big round **Ø52 mm
 | [`ORDER_LIST.md`](ORDER_LIST.md), [`ORDER_LIST.csv`](ORDER_LIST.csv) | buy list, fallbacks, tools, ESP32-S3 path |
 | [`BUILD_GUIDE.md`](BUILD_GUIDE.md) | wiring, assembly, flashing, tests, safety, troubleshooting |
 | [`STEP0_PHONE_TEST.md`](STEP0_PHONE_TEST.md), [`step0/hold_to_talk.html`](step0/hold_to_talk.html) | free no-hardware test |
+| [`GROK_BOT_BRIDGE.md`](GROK_BOT_BRIDGE.md) | voice → Grok Bot bridge plan |
 | [`NEXT_V2.md`](NEXT_V2.md) | path to the custom board |
 | [`SESSION_LOG.md`](SESSION_LOG.md) | decisions with Max |
 | [`firmware/`](firmware/) | [`agent_pendant_v0_slim_nrf52`](firmware/firmware/agent_pendant_v0_slim_nrf52/agent_pendant_v0_slim_nrf52.ino) (**the easy-MVP firmware**, XIAO nRF52840 Sense), [`agent_pendant_v0_nohaptic`](firmware/firmware/agent_pendant_v0_nohaptic/agent_pendant_v0_nohaptic.ino) (ESP32-S3 bench version), [`tools/pendant_rx.py`](firmware/tools/pendant_rx.py) (laptop receiver), [`README.md`](firmware/README.md) (BLE protocol and behaviour) |
